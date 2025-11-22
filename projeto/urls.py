@@ -10,5 +10,5 @@ def sobre_view(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', sobre_view),
+    path('', sobre_view), # Rota raiz do site (assume a página sobre)
 ]
