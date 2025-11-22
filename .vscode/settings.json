@@ -30,7 +30,7 @@
   "code-runner.executorMap": {
     "javascript": "node",
     "typescript": "ts-node",
-    "python": "clear && python -u",
+    "python": "clear && python -u $fullFileName",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     "c": "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
     "cpp": "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
@@ -43,12 +43,12 @@
   "explorer.compactFolders": false,
 
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
 
   // "debug.console.fontSize": 16,
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontFamily": "monospace",
-  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.location": "default",
 
   "breadcrumbs.enabled": false,
   // "editor.lineNumbers": "off",
@@ -98,5 +98,7 @@
     { "directory": "./frontend", "changeProcessCWD": true }
   ],
   // Python interpreter (macOS - ambiente virtual na raiz do projeto)
-  "python.defaultInterpreterPath": ".venv/bin/python"
+  "python.defaultInterpreterPath": "venv/bin/python",
+  "python-envs.pythonProjects": [],
+  "python-envs.defaultEnvManager": "ms-python.python:venv"
 }
