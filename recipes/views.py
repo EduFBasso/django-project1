@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return render(request, 'recipes/home.html') # RENDERIZA template home.html 
-# (mágica do Django -> Não esqueça de especificar em settings.py em INSTALLED_APPS
-# a app 'recipes' para o Django encontrar o template)
+    return render(request, 'recipes/home.html', context={
+        'name': 'Eduardo Figueiredo Basso',
+        'age': 30,
+    })  # Utilizando contexto: renderiza o template 'home.html' 
+        # disponibilizando com as chaves 'name' e 'age'
 
 def sobre(request):
     return HttpResponse("Sobre")
