@@ -100,5 +100,19 @@
   // Python interpreter (macOS - ambiente virtual na raiz do projeto)
   "python.defaultInterpreterPath": "venv/bin/python",
   "python-envs.pythonProjects": [],
-  "python-envs.defaultEnvManager": "ms-python.python:venv"
+  "python-envs.defaultEnvManager": "ms-python.python:venv",
+
+  // 🎨 Emmet para templates Django
+  "emmet.includeLanguages": {
+    "django-html": "html",
+    "jinja-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // 🐍 Associar arquivos Django HTML com sintaxe correta
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**": "django-html"
+  }
 }
